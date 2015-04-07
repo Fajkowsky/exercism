@@ -1,3 +1,5 @@
+import sys
+
 answers = {
     'question': 'Sure.',
     'yelling': 'Whoa, chill out!',
@@ -7,7 +9,9 @@ answers = {
 
 
 def hey(what):
-    what = what.strip().decode('utf-8')
+    what = what.strip()
+    if sys.version_info <= (3, 0, 0):
+        what = what.decode('utf-8')
     if what.isupper():
         return answers['yelling']
     elif what.endswith('?'):
