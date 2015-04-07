@@ -7,7 +7,7 @@ answers = {
 
 
 def hey(what):
-    what = what.strip()
+    what = what.strip().decode('utf-8')
     if what.isupper():
         return answers['yelling']
     elif what.endswith('?'):
