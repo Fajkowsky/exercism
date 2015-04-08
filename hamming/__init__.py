@@ -1,8 +1,3 @@
-import unittest
-
-import hamming
-
-
 class HammingTest(unittest.TestCase):
 
     def test_no_difference_between_identical_strands(self):
@@ -25,7 +20,3 @@ class HammingTest(unittest.TestCase):
 
     def test_hamming_distance_in_very_long_strand(self):
         self.assertEqual(9, hamming.distance('GGACGGATTCTG', 'AGGACGGATTCT'))
-
-
-if __name__ == '__main__':
-    unittest.main()
